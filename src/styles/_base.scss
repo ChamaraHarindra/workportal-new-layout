@@ -1,0 +1,356 @@
+body,
+html {
+  background: $grayColor100;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+.application-wrap {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+// left Nav Sidebar
+aside.application-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 3;
+  width: 66px;
+  background: $primaryColor;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      margin-top: 10px;
+      list-style-type: none;
+      padding: 0;
+
+      button,
+      a {
+        border: none;
+        text-decoration: none;
+        display: block;
+        background: none;
+        color: $grayColor100;
+        width: 34px;
+        cursor: pointer;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border-radius: 3px;
+        margin: 12px 0 12px;
+
+        i {
+          font-size: 22px;
+        }
+
+        &:hover {
+          background: darken($primaryColor, 10%);
+        }
+
+        &.is-selected {
+          background: rgba($whiteColor, 0.4);
+        }
+      }
+    }
+  }
+
+  .company-logo {
+    margin: 15px 0;
+    display: block;
+  }
+}
+
+main.application-main-content {
+  position: absolute;
+  min-height: 100vh;
+  width: calc(100% - 66px);
+  top: 0;
+  left: 66px;
+}
+
+header.application-header {
+  position: fixed;
+  background: $whiteColor;
+  height: 60px;
+  width: calc(100% - 66px);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  left: 66px;
+  justify-content: space-between;
+  filter: drop-shadow(0px 1px 0px rgba(0, 0, 0, 0.08));
+}
+
+section.application-content {
+  top: 60px;
+  position: relative;
+  width: 100%;
+  padding: 20px 20px 0px 30px;
+}
+
+// tooltip theme
+
+.tippy-box[data-theme~="light"] {
+  background-color: $secondaryColor;
+  color: $whiteColor;
+}
+
+.tippy-box[data-theme~="light"][data-placement^="top"] > .tippy-arrow::before {
+  border-top-color: $secondaryColor;
+}
+.tippy-box[data-theme~="light"][data-placement^="bottom"]
+  > .tippy-arrow::before {
+  border-bottom-color: $secondaryColor;
+}
+.tippy-box[data-theme~="light"][data-placement^="left"] > .tippy-arrow::before {
+  border-left-color: $secondaryColor;
+}
+.tippy-box[data-theme~="light"][data-placement^="right"]
+  > .tippy-arrow::before {
+  border-right-color: $secondaryColor;
+}
+
+// sidebar
+// Sidebar Base
+
+// rightsidebar
+
+.sidebar-new {
+  position: fixed;
+  left: 66px;
+  width: $navWidth;
+  background-color: white;
+  height: calc(100vh - 61px);
+  top: 61px;
+  transform: translateX(-$navWidth);
+  transition: all ease-in 0.3s;
+  z-index: 2;
+
+  .sidebar-new__heading {
+    padding: 20px 15px;
+    position: relative;
+
+    h2 {
+      font-weight: 600;
+      margin: 1px 0 0;
+      padding: 0;
+      line-height: 1;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+
+  .sidebar-new__content {
+    padding: 0 15px 20px;
+    overflow-y: auto;
+    height: calc(100% - 55px);
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.013);
+      border-radius: 10px;
+      background-color: #f5f5f5;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: #f5f5f5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: none;
+      background-color: rgb(124, 124, 124);
+    }
+
+    h3 {
+      display: flex;
+      font-size: 18px;
+      line-height: 1;
+      align-items: center;
+      margin: 0 0 25px;
+
+      small {
+        margin-left: 12px;
+        height: 20px;
+        width: 30px;
+        background: #18bbad;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+.close-sidebar-new {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  border: none;
+  border-radius: 100px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: all ease-in 0.2s;
+  background: $primaryColor;
+  color: rgba($whiteColor, 0.7);
+  cursor: pointer;
+  z-index: 2;
+
+  &:hover {
+    background: $secondaryColor;
+    width: auto;
+  }
+
+  span {
+    line-height: 1;
+  }
+}
+
+.offcanvas-panel {
+  @extend .sidebar-new;
+
+  &.offcanvas {
+    transform: translateX(0) !important;
+    transition: all ease-out 0.3s;
+    border-right: 1px solid #e4e5e9;
+    // box-shadow: -3px 1px 20px 0px rgba(0, 0, 0, 0.22);
+
+    .close-sidebar-new {
+      right: -13px;
+    }
+  }
+
+  .app-sidebar__inner {
+    padding: 20px;
+    min-height: 100%;
+  }
+}
+
+body {
+  overflow-x: hidden;
+
+  &.no-scrolling {
+    overflow: hidden;
+
+    .sidemenu-overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.123);
+      display: block;
+      z-index: 9;
+    }
+  }
+}
+
+.sidemenu-overlay {
+  display: none;
+}
+
+.left-margin {
+  margin-left: calc($navWidth + 1px);
+  transition: all ease-out 0.3s;
+}
+
+.no-margin {
+  margin-left: 0;
+  transition: all ease-out 0.3s;
+}
+
+.left-nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    position: relative;
+
+    .is-expanded {
+      position: relative;
+      &:after {
+        content: "\EA13";
+        font-family: remixicon !important;
+        position: absolute;
+        right: 10px;
+        font-size: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &.menu-expanded {
+        font-weight: 600;
+        background: $grayColor200;
+        color: $secondaryColor;
+        &:after {
+          content: "\F1AE";
+        }
+      }
+    }
+
+    ul.sub-nav {
+      margin: 0;
+      padding: 5px 0 10px;
+      list-style-type: none;
+      display: none;
+
+      a {
+        font-size: 13px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        position: relative;
+        padding-left: 18px;
+        color: lighten($primaryColor, 30%);
+
+        &:before {
+          content: "\EA53";
+          font-family: remixicon !important;
+          position: absolute;
+          left: 0;
+          font-size: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &:hover {
+          background: none;
+          color: $secondaryColor;
+        }
+      }
+    }
+  }
+
+  a {
+    display: block;
+    padding: 10px 10px;
+    color: $primaryColor;
+    text-decoration: none;
+    transition: all ease-in 0.2s;
+
+    &:hover {
+      border-radius: 3px;
+      background: $grayColor200;
+    }
+  }
+}

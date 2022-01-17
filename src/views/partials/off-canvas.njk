@@ -1,0 +1,280 @@
+{% import "macro/macro.njk" as Macro %}
+
+{% call Macro.Offcanvas('hrManagement', 'HR Management') %}
+<ul class="left-nav">
+    <li>
+        <a href="#">HR App Review</a>
+    </li>
+    <li>
+        <a href="#">E-Verify</a>
+    </li>
+    <li>
+        <a href="javascript:void(0)" class="is-expanded">Employee Management</a>
+        <ul class="sub-nav">
+            <li>
+                <a href="#">Employee</a>
+            </li>
+            <li>
+                <a href="#">Employee WOTC</a>
+            </li>
+            <li>
+                <a href="#">Duplicate Employees</a>
+            </li>
+            <li>
+                <a href="#">Review Pending</a>
+            </li>
+            <li>
+                <a href="#">Seperation Pending</a>
+            </li>
+            <li>
+                <a href="#">Payroll Missing Employees</a>
+            </li>
+            <li>
+                <a href="#">Store Change Requests</a>
+            </li>
+            <li>
+                <a href="#">Pay Rate Requests</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+{%- endcall %}
+
+{% call Macro.Offcanvas('storeManagement', 'Store Management') %}
+<ul class="left-nav">
+    <li>
+        <a href="#">Employee Management</a>
+    </li>
+    <li>
+        <a href="#">Rehire Approval Pending</a>
+    </li>
+    <li>
+        <a href="#">Review Pending</a>
+    </li>
+    <li>
+        <a href="#">Payroll Report</a>
+    </li>
+    <li>
+        <a href="#">Store Change Requests</a>
+    </li>
+    <li>
+        <a href="#">Pay Rate Requests</a>
+    </li>
+    <li>
+        <a href="#">Scheduling</a>
+    </li>
+    <li>
+        <a href="javascript:void(0)" class="is-expanded">Sales</a>
+        <ul class="sub-nav">
+            <li>
+                <a href="#">Sales Upload</a>
+            </li>
+            <li>
+                <a href="#">Daily Sales</a>
+            </li>
+            <li>
+                <a href="#">Sales & Controllables</a>
+            </li>
+            <li>
+                <a href="#">Sales Comparison</a>
+            </li>
+            <li>
+                <a href="#">Over/Short Summary Report</a>
+            </li>
+            <li>
+                <a href="#">Terminated Employee Report</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Deposits</a>
+    </li>
+    <li>
+        <a href="#">Invoices</a>
+    </li>
+    <li>
+        <a href="javascript:void(0)" class="is-expanded">Weekly Metrics</a>
+        <ul class="sub-nav">
+            <li>
+                <a href="#">Metrics Report</a>
+            </li>
+            <li>
+                <a href="#">Metrics Entry</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Expenses</a>
+    </li>
+    <li>
+        <a href="#">Credit Card</a>
+    </li>
+    <li>
+        <a href="#">Minimum Wage Review</a>
+    </li>
+    <li>
+        <a href="#">Store Incident</a>
+    </li>
+    <li>
+        <a href="#">Budget</a>
+    </li>
+    <li>
+        <a href="#">Top Rank Store Report</a>
+    </li>
+    <li>
+        <a href="#">Area Tracking Report</a>
+    </li>
+    <li>
+        <a href="#">Labour Cost Analysis Report</a>
+    </li>
+</ul>
+{%- endcall %}
+
+{% call Macro.Offcanvas('workPlus', 'Work +') %}
+<ul class="left-nav">
+    <li>
+        <a href="#">DoLists</a>
+    </li>
+    <li>
+        <a href="#">Actions</a>
+    </li>
+    <li>
+        <a href="#">WorkOrder</a>
+    </li>
+</ul>
+{%- endcall %}
+
+{% call Macro.Offcanvas('payrollManagement', 'Payroll Management') %}
+<ul class="left-nav">
+    <li>
+        <a href="#" class="is-expanded">Import</a>
+        <ul class="sub-nav">
+            <li>
+                <a href="#">Radiant Upload</a>
+            </li>
+            <li>
+                <a href="#">Import Summary</a>
+            </li>
+            <li>
+                <a href="#">Payroll Upload</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Worklog</a>
+    </li>
+    <li>
+        <a href="#">Export</a>
+    </li>
+    <li>
+        <a href="#" class="is-expanded">Reports</a>
+        <ul class="sub-nav">
+            <li>
+                <a href="#">Worklog</a>
+            </li>
+            <li>
+                <a href="#">Worklog (Amount)</a>
+            </li>
+            <li>
+                <a href="#">Shared Employee</a>
+            </li>
+            <li>
+                <a href="#">Shared Company</a>
+            </li>
+            <li>
+                <a href="#">Employee Turnover</a>
+            </li>
+            <li>
+                <a href="#">Timecard Statement</a>
+            </li>
+            <li>
+                <a href="#">Exception List</a>
+            </li>
+            <li>
+                <a href="#">Payroll Report</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+{%- endcall %}
+
+{% call Macro.Offcanvas('hiringManagement', 'Hiring Management') %}
+<ul class="left-nav">
+    <li>
+        <a href="#">Available</a>
+    </li>
+    <li>
+        <a href="#">Short Listed</a>
+    </li>
+    <li>
+        <a href="#">Interview</a>
+    </li>
+    <li>
+        <a href="#">Onboarded</a>
+    </li>
+    <li>
+        <a href="#">Form Completed</a>
+    </li>
+    <li>
+        <a href="#">Verification</a>
+    </li>
+</ul>
+{%- endcall %}
+
+{% call Macro.Offcanvas('backOfficeManagement', 'Back office Management') %}
+<ul class="left-nav">
+    <li>
+        <a href="javascript:void(0)" class="is-expanded">P&L</a>
+        <ul class="sub-nav">
+            <li>
+                <a href="#">Upload</a>
+            </li>
+            <li>
+                <a href="#">P&L Export-DD</a>
+            </li>
+            <li>
+                <a href="#">P&L Status Report</a>
+            </li>
+            <li>
+                <a href="#">Manage Fixed P&L Values</a>
+            </li>
+            <li>
+                <a href="#">Manage Fields</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0)" class="is-expanded">Accounting</a>
+        <ul class="sub-nav">
+            <li>
+                <a href="#">Export</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Tax</a>
+    </li>
+    <li>
+        <a href="javascript:void(0)" class="is-expanded">Sales</a>
+        <ul class="sub-nav">
+            <li>
+                <a href="#">Compare Summary</a>
+            </li>
+            <li>
+                <a href="#">Daily Sales</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0)" class="is-expanded">Credit Card</a>
+        <ul class="sub-nav">
+            <li>
+                <a href="#">Credit Card Analytics</a>
+            </li>
+            <li>
+                <a href="#">Upload</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+{%- endcall %}

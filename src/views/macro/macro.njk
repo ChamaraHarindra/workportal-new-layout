@@ -1,0 +1,13 @@
+{% macro Offcanvas(id, navHeading) %}
+    <div class="offcanvas-panel" id="{{id}}">
+        <button class="close-sidebar-new">
+            <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <div class="sidebar-new__heading">
+            <h2>{{ navHeading }}</h2>
+        </div>
+        <div class="sidebar-new__content">
+            {{ caller() }}
+        </div>
+    </div>
+{% endmacro %}

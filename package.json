@@ -1,0 +1,70 @@
+{
+  "name": "gulp-nunjucks-boilerplate",
+  "version": "2.1.0",
+  "description": "A scalable Gulp generated Nunjucks boilerplate.",
+  "license": "MIT",
+  "author": "Chamara Harindra",
+  "repository": "",
+  "bugs": {
+    "url": "https://github.com/michaelschwobe/gulp-nunjucks-boilerplate/issues"
+  },
+  "homepage": "https://github.com/michaelschwobe/gulp-nunjucks-boilerplate#readme",
+  "keywords": [
+    "autoprefixer",
+    "babel",
+    "boilerplate",
+    "browser-sync",
+    "clean-css",
+    "front-end",
+    "gulp",
+    "imagemin",
+    "minimal",
+    "nunjucks",
+    "sass",
+    "scalable",
+    "skeleton",
+    "webpack"
+  ],
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "cross-env NODE_ENV=production gulp",
+    "build:public": "cross-env NODE_ENV=production gulp public",
+    "build:views": "cross-env NODE_ENV=production gulp views",
+    "build:media": "cross-env NODE_ENV=production gulp media",
+    "build:styles": "cross-env NODE_ENV=production gulp styles",
+    "build:scripts": "cross-env NODE_ENV=production gulp scripts",
+    "clean": "gulp clean"
+  },
+  "dependencies": {
+    "cssnano": "^5.0.15",
+    "gulp-beautify": "^3.0.0",
+    "gulp-bump": "^3.2.0",
+    "gulp-copy": "^4.0.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-replace": "^1.1.3",
+    "gulp-terser": "^2.1.0",
+    "gulp-wait": "0.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.2",
+    "cross-env": "^5.2.1",
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.3.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-noop": "^1.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^2.6.3",
+    "run-sequence": "^2.2.1",
+    "sass": "^1.45.0"
+  }
+}
