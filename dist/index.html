@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkPortal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+</head>
+
+<body>
+    <div class="application-wrap">
+        <aside class="application-nav">
+            <nav>
+                <div class="company-logo">
+                    <img src="/media/workportal-logo-small.svg" alt="WorkPortal">
+                </div>
+                <ul>
+                    <li>
+                        <a href="./" class="is-selected" data-tippy-content="Dashboard">
+                            <i class="ri-dashboard-line"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <button data-target="#hrManagement" data-toggle="offcanvas" data-tippy-content="HR Management">
+                            <i class="ri-group-line"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button data-target="#storeManagement" data-toggle="offcanvas" data-tippy-content="Store Management">
+                            <i class="ri-store-2-line"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button data-target="#workPlus" data-toggle="offcanvas" data-tippy-content="Work +">
+                            <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.0737 2V5.14667C7.0737 5.65925 6.8703 6.15084 6.50826 6.51329C6.14621 6.87574 5.65517 7.07937 5.14316 7.07937H2V12.9206H7.4796C7.60137 12.9206 7.7206 12.9206 7.83983 12.9206C9.15447 12.8316 10.392 12.2673 11.3221 11.333C12.2522 10.3986 12.8114 9.15768 12.8958 7.84127C12.8958 7.7219 12.9085 7.60254 12.9085 7.48064V2H7.0737ZM7.86266 12.141C7.73704 12.1533 7.61088 12.1592 7.48467 12.1587H2.76613V7.84127H5.14823C5.86188 7.8406 6.54611 7.55649 7.05074 7.0513C7.55536 6.54611 7.83916 5.86111 7.83983 5.14667V2.7619H12.1525V7.48571C12.1529 7.61207 12.147 7.73837 12.1347 7.86413C12.0451 8.96845 11.5662 10.0049 10.7836 10.7883C10.001 11.5718 8.96575 12.0512 7.86266 12.141Z" fill="#f7f8fc" stroke="#f7f8fc" />
+                                <path d="M12.5203 7.07936C12.3985 7.07936 12.2793 7.07936 12.16 7.09206C10.8492 7.18313 9.6158 7.7466 8.6881 8.67814C7.76039 9.60968 7.20127 10.8462 7.11425 12.1587C7.11425 12.2781 7.10156 12.3975 7.10156 12.5194V18H12.9363V14.8584C12.935 14.3467 13.1364 13.8553 13.4964 13.4921C13.8564 13.1288 14.3456 12.9233 14.8567 12.9206H17.9999V7.07936H12.5203ZM17.2388 12.1587H14.8567C14.1431 12.1594 13.4588 12.4435 12.9542 12.9487C12.4496 13.4539 12.1658 14.1389 12.1651 14.8533V17.2381H7.85247V12.5194C7.852 12.393 7.85792 12.2667 7.87023 12.1409C7.95987 11.0366 8.43875 10.0002 9.22132 9.21673C10.0039 8.43328 11.0392 7.95387 12.1423 7.86412C12.2679 7.85181 12.3941 7.84587 12.5203 7.84635H17.2388V12.1587Z" fill="#f7f8fc" stroke="#f7f8fc" />
+                            </svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button data-toggle="offcanvas" data-target="#payrollManagement" data-tippy-content="Payroll Management">
+                            <i class="ri-money-dollar-circle-line"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button data-toggle="offcanvas" data-target="#hiringManagement" data-tippy-content="Hiring Management">
+                            <i class="ri-user-add-line"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button data-toggle="offcanvas" data-target="#backOfficeManagement" data-tippy-content="Back Office Management">
+                            <i class="ri-building-line"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="application-main-content">
+            <section class="application-content"> Main Content </section>
+        </main>
+        <header class="application-header"> Header Content </header>
+    </div>
+    <div class="offcanvas-panel" id="hrManagement">
+        <button class="close-sidebar-new">
+            <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <div class="sidebar-new__heading">
+            <h2>HR Management</h2>
+        </div>
+        <div class="sidebar-new__content">
+            <ul class="left-nav">
+                <li>
+                    <a href="#">HR App Review</a>
+                </li>
+                <li>
+                    <a href="#">E-Verify</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="is-expanded">Employee Management</a>
+                    <ul class="sub-nav">
+                        <li>
+                            <a href="#">Employee</a>
+                        </li>
+                        <li>
+                            <a href="#">Employee WOTC</a>
+                        </li>
+                        <li>
+                            <a href="#">Duplicate Employees</a>
+                        </li>
+                        <li>
+                            <a href="#">Review Pending</a>
+                        </li>
+                        <li>
+                            <a href="#">Seperation Pending</a>
+                        </li>
+                        <li>
+                            <a href="#">Payroll Missing Employees</a>
+                        </li>
+                        <li>
+                            <a href="#">Store Change Requests</a>
+                        </li>
+                        <li>
+                            <a href="#">Pay Rate Requests</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="offcanvas-panel" id="storeManagement">
+        <button class="close-sidebar-new">
+            <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <div class="sidebar-new__heading">
+            <h2>Store Management</h2>
+        </div>
+        <div class="sidebar-new__content">
+            <ul class="left-nav">
+                <li>
+                    <a href="#">Employee Management</a>
+                </li>
+                <li>
+                    <a href="#">Rehire Approval Pending</a>
+                </li>
+                <li>
+                    <a href="#">Review Pending</a>
+                </li>
+                <li>
+                    <a href="#">Payroll Report</a>
+                </li>
+                <li>
+                    <a href="#">Store Change Requests</a>
+                </li>
+                <li>
+                    <a href="#">Pay Rate Requests</a>
+                </li>
+                <li>
+                    <a href="#">Scheduling</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="is-expanded">Sales</a>
+                    <ul class="sub-nav">
+                        <li>
+                            <a href="#">Sales Upload</a>
+                        </li>
+                        <li>
+                            <a href="#">Daily Sales</a>
+                        </li>
+                        <li>
+                            <a href="#">Sales & Controllables</a>
+                        </li>
+                        <li>
+                            <a href="#">Sales Comparison</a>
+                        </li>
+                        <li>
+                            <a href="#">Over/Short Summary Report</a>
+                        </li>
+                        <li>
+                            <a href="#">Terminated Employee Report</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Deposits</a>
+                </li>
+                <li>
+                    <a href="#">Invoices</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="is-expanded">Weekly Metrics</a>
+                    <ul class="sub-nav">
+                        <li>
+                            <a href="#">Metrics Report</a>
+                        </li>
+                        <li>
+                            <a href="#">Metrics Entry</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Expenses</a>
+                </li>
+                <li>
+                    <a href="#">Credit Card</a>
+                </li>
+                <li>
+                    <a href="#">Minimum Wage Review</a>
+                </li>
+                <li>
+                    <a href="#">Store Incident</a>
+                </li>
+                <li>
+                    <a href="#">Budget</a>
+                </li>
+                <li>
+                    <a href="#">Top Rank Store Report</a>
+                </li>
+                <li>
+                    <a href="#">Area Tracking Report</a>
+                </li>
+                <li>
+                    <a href="#">Labour Cost Analysis Report</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="offcanvas-panel" id="workPlus">
+        <button class="close-sidebar-new">
+            <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <div class="sidebar-new__heading">
+            <h2>Work +</h2>
+        </div>
+        <div class="sidebar-new__content">
+            <ul class="left-nav">
+                <li>
+                    <a href="#">DoLists</a>
+                </li>
+                <li>
+                    <a href="#">Actions</a>
+                </li>
+                <li>
+                    <a href="#">WorkOrder</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="offcanvas-panel" id="payrollManagement">
+        <button class="close-sidebar-new">
+            <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <div class="sidebar-new__heading">
+            <h2>Payroll Management</h2>
+        </div>
+        <div class="sidebar-new__content">
+            <ul class="left-nav">
+                <li>
+                    <a href="#" class="is-expanded">Import</a>
+                    <ul class="sub-nav">
+                        <li>
+                            <a href="#">Radiant Upload</a>
+                        </li>
+                        <li>
+                            <a href="#">Import Summary</a>
+                        </li>
+                        <li>
+                            <a href="#">Payroll Upload</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Worklog</a>
+                </li>
+                <li>
+                    <a href="#">Export</a>
+                </li>
+                <li>
+                    <a href="#" class="is-expanded">Reports</a>
+                    <ul class="sub-nav">
+                        <li>
+                            <a href="#">Worklog</a>
+                        </li>
+                        <li>
+                            <a href="#">Worklog (Amount)</a>
+                        </li>
+                        <li>
+                            <a href="#">Shared Employee</a>
+                        </li>
+                        <li>
+                            <a href="#">Shared Company</a>
+                        </li>
+                        <li>
+                            <a href="#">Employee Turnover</a>
+                        </li>
+                        <li>
+                            <a href="#">Timecard Statement</a>
+                        </li>
+                        <li>
+                            <a href="#">Exception List</a>
+                        </li>
+                        <li>
+                            <a href="#">Payroll Report</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="offcanvas-panel" id="hiringManagement">
+        <button class="close-sidebar-new">
+            <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <div class="sidebar-new__heading">
+            <h2>Hiring Management</h2>
+        </div>
+        <div class="sidebar-new__content">
+            <ul class="left-nav">
+                <li>
+                    <a href="#">Available</a>
+                </li>
+                <li>
+                    <a href="#">Short Listed</a>
+                </li>
+                <li>
+                    <a href="#">Interview</a>
+                </li>
+                <li>
+                    <a href="#">Onboarded</a>
+                </li>
+                <li>
+                    <a href="#">Form Completed</a>
+                </li>
+                <li>
+                    <a href="#">Verification</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="offcanvas-panel" id="backOfficeManagement">
+        <button class="close-sidebar-new">
+            <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <div class="sidebar-new__heading">
+            <h2>Back office Management</h2>
+        </div>
+        <div class="sidebar-new__content">
+            <ul class="left-nav">
+                <li>
+                    <a href="javascript:void(0)" class="is-expanded">P&L</a>
+                    <ul class="sub-nav">
+                        <li>
+                            <a href="#">Upload</a>
+                        </li>
+                        <li>
+                            <a href="#">P&L Export-DD</a>
+                        </li>
+                        <li>
+                            <a href="#">P&L Status Report</a>
+                        </li>
+                        <li>
+                            <a href="#">Manage Fixed P&L Values</a>
+                        </li>
+                        <li>
+                            <a href="#">Manage Fields</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="is-expanded">Accounting</a>
+                    <ul class="sub-nav">
+                        <li>
+                            <a href="#">Export</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Tax</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="is-expanded">Sales</a>
+                    <ul class="sub-nav">
+                        <li>
+                            <a href="#">Compare Summary</a>
+                        </li>
+                        <li>
+                            <a href="#">Daily Sales</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="is-expanded">Credit Card</a>
+                    <ul class="sub-nav">
+                        <li>
+                            <a href="#">Credit Card Analytics</a>
+                        </li>
+                        <li>
+                            <a href="#">Upload</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="/scripts/all.js"></script>
+</body>
+
+</html>
